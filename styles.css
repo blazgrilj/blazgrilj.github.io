@@ -1,11 +1,11 @@
 :root {
-    --bg-color: #f4f4f4;
-    --text-color: #000000;
-    --header-bg-color: #3498db;
-    --sidebar-bg-color: #2c3e50;
-    --sidebar-header-bg-color: #34495e;
-    --tab-bg-color: #3498db;
-    --tab-hover-bg-color: #1abc9c;
+    --bg-color: #2e3338;
+    --text-color: #d1d1d1;
+    --header-bg-color: #34495e;
+    --sidebar-bg-color: #1c2833;
+    --sidebar-header-bg-color: #1f2d3a;
+    --tab-bg-color: #2980b9;
+    --tab-hover-bg-color: #3498db;
 }
 
 body.dark-mode {
