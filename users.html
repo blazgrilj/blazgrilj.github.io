@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobavitelj Podrobnosti</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="sidebar-header" onclick="window.location.href='suppliers.html'">
+            <h2>Business Intelligence</h2>
+        </div>
+        <ul>
+            <li><a href="suppliers.html"><i class="fas fa-truck"></i> Dobavitelji</a>
+            <li><a href="#" class="disabled"><i class="fas fa-industry"></i> Proizvodnja</a></li>
+            <li><a href="#" class="disabled"><i class="fas fa-file-invoice-dollar"></i> Naročila & Finance</a></li>
+            <li><a href="#" class="disabled"><i class="fas fa-shopping-cart"></i> Nabava</a></li>
+            <li><a href="users.html"><i class="fas fa-user"></i> Uporabniki</a></li>   
+        </ul>
+        <ul class="bottom-links">
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Nastavitve</a></li>
+            <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Odjava</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="settings-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ime</th>
+                        <th>Vloga</th>
+                        <th>Pravice</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Janez</td>
+                        <td>Proizvodnja, Nabava</td>
+                        <td>Osnovno</td>
+                        <td><button class="details-button" onclick="window.location.href='permissions.html'">Uredi</button></td>
+                    </tr>
+                    <tr>
+                        <td>Toni</td>
+                        <td>Dobavitelji</td>
+                        <td>Osnovno</td>
+                        <td><button class="details-button" onclick="window.location.href='permissions.html'">Uredi</button></td>
+                    </tr>
+                    <tr>
+                        <td>Mojca</td>
+                        <td>Naročila & Finance</td>
+                        <td>Osnovno</td>
+                        <td><button class="details-button" onclick="window.location.href='permissions.html'">Uredi</button></td>
+                    </tr>
+                    <tr>
+                        <td>Klemen</td>
+                        <td>Proizvodnja</td>
+                        <td>Osnovno</td>
+                        <td><button class="details-button" onclick="window.location.href='permissions.html'">Uredi</button></td>
+                    </tr>
+                    <tr>
+                        <td>Tina</td>
+                        <td>Dobavitelji</td>
+                        <td>Administrator</td>
+                        <td><button class="details-button" onclick="window.location.href='permissions.html'">Uredi</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="scripts.js"></script>
+</html>

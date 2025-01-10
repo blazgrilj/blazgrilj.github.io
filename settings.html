@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <title>Nastavitve</title>
+
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header" onclick="window.location.href='suppliers.html'">
+            <h2>Business Intelligence</h2>
+        </div>  
+        <ul>
+            <li><a href="suppliers.html"><i class="fas fa-truck"></i> Dobavitelji</a>
+            <li><a href="#" class="disabled"><i class="fas fa-industry"></i> Proizvodnja</a></li>
+            <li><a href="#" class="disabled"><i class="fas fa-file-invoice-dollar"></i> Naročila & Finance</a></li>
+            <li><a href="#" class="disabled"><i class="fas fa-shopping-cart"></i> Nabava</a></li>
+            <li><a href="index.html"><i class="fas fa-user"></i> Uporabniki</a></li>         
+            
+        </ul>
+        <ul class="bottom-links">
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Nastavitve</a></li>
+            <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Odjava</a></li>
+        </ul>
+    </div>
+
+    <div class="content" style="padding: 10%;">
+        <div class="tab-content" id="basicInfo">
+            <div class="permissions-form">
+                <h1 style="text-align: left; padding-bottom: 20px;">Nastavitve</h1>
+                <div class="dark-mode-toggle" style="display: flex; align-items: center;">
+                    <label for="darkModeSwitch" style="margin-right: 10px;">Temni način:</label>
+                    <input id="toggle" type="checkbox" id="darkModeSwitch" onclick="toggleDarkMode()">
+                </div>
+               
+                <div class="text-size-toggle">
+                    <label style="margin-top: 10px;">Velikost besedila:</label>
+                    <button id="smallTextBtn" onclick="changeTextSize('small')">Majhno</button>
+                    <button id="normalTextBtn" class="active" onclick="changeTextSize('normal')">Srednje</button>
+                    <button id="largeTextBtn" onclick="changeTextSize('large')">Veliko</button>
+                </div>
+
+                <div class="color-blind-mode-toggle" style="display: flex; align-items: center;">
+                    <label for="colorBlindSwitch" style="margin-right: 10px;">Način za barvno slepe:</label>
+                    <input id="toggle" type="checkbox" id="colorBlindSwitch" onclick="toggleColorBlindMode()">
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="scripts.js"></script>
+</html>

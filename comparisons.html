@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <title>Supplier Comparison</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header" onclick="window.location.href='suppliers.html'">
+            <h2>Business Intelligence</h2>
+        </div>  
+        <ul>
+            <li><a href="suppliers.html"><i class="fas fa-truck"></i> Dobavitelji</a>
+            <li><a href="#" class="disabled"><i class="fas fa-industry"></i> Proizvodnja</a></li>
+            <li><a href="#" class="disabled"><i class="fas fa-file-invoice-dollar"></i> Naročila & Finance</a></li>
+            <li><a href="#" class="disabled"><i class="fas fa-shopping-cart"></i> Nabava</a></li>
+            <li><a href="index.html"><i class="fas fa-user"></i> Uporabniki</a></li>         
+            
+        </ul>
+        <ul class="bottom-links">
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Nastavitve</a></li>
+            <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Odjava</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="cards-wrapper" style="display: flex; gap: 20px; justify-content: center;">
+            <div class="card">
+                <h3>Dobavitelj B</h3>
+                <p>Pravočasnost: 80% </span></p>
+                <p>Stroški: 1500 €</p>
+                <p>Kakovost: 4</p>
+                <p>Status sodelovanja: <span class="status green"></span></p>
+                <div class="ranking silver">2</div>
+            </div>
+    
+            <div class="card">
+                <h3>Dobavitelj D</h3>
+                <p>Pravočasnost: 75%</span></p>
+                <p>Stroški: 1300 €</p>
+                <p>Kakovost: 2</p>
+                <p>Status sodelovanja: <span class="status green"></span></p>
+                <div class="ranking gold">1</div>
+            </div>
+    
+            <div class="card">
+                <h3>Dobavitelj F</h3>
+                <p>Pravočasnost: 90%</span></p>
+                <p>Stroški: 1800 €</p>
+                <p>Kakovost: 3</p>
+                <p>Status sodelovanja: <span class="status red"></span></p>
+                <div class="ranking bronze">3</div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="scripts.js"></script>
+</html>

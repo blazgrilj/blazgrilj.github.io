@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobavitelj Podrobnosti</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+        <div class="sidebar">
+            <div class="sidebar-header" onclick="window.location.href='suppliers.html'">
+                <h2>Business Intelligence</h2>
+            </div>
+            <ul>
+                <li><a href="suppliers.html"><i class="fas fa-truck"></i> Dobavitelji</a>
+                <li><a href="#" class="disabled"><i class="fas fa-industry"></i> Proizvodnja</a></li>
+                <li><a href="#" class="disabled"><i class="fas fa-file-invoice-dollar"></i> Naročila & Finance</a></li>
+                <li><a href="#" class="disabled"><i class="fas fa-shopping-cart"></i> Nabava</a></li>
+                <li><a href="users.html"><i class="fas fa-user"></i> Uporabniki</a></li>   
+            </ul>
+            <ul class="bottom-links">
+                <li><a href="settings.html"><i class="fas fa-cog"></i> Nastavitve</a></li>
+                <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Odjava</a></li>
+            </ul>
+        </div>
+
+
+        <div class="content">
+            <div class="header">
+                <h2 id="supplier-name" style="margin-bottom: 10px;">Dobavitelj A <span class="status green"></span></h2>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-button active" onclick="openTab('basicInfo')"><h3>OSNOVNI PODATKI</h3></button>
+                <button class="tab-button" onclick="openTab('details')"><h3>NAROČILA DOBAVITELJA</h3></button>
+                <button class="tab-button" onclick="openTab('graph')"><h3>GRAF</h2></button>
+            </div>
+
+            <div class="tab-content" id="basicInfo">
+                <div class="info">
+                    <div class="info-container">
+                        <div class="info-details">
+                            <p><strong>Naslov:</strong> Pregrad 203<br>3000 Celje<br>Slovenija</p>
+                            <p><strong>Kontakt:</strong><br>+386 41 595 666<br>dobaviteljA@dobava.si</p>
+                            <p><strong>Skupina:</strong> Embalaža</p>
+                            <p><strong>Oznake:</strong> <span class="tag">December</span></p>
+                        </div>
+                        
+                        <div class="map">
+                            <img src="map_place_holder.png" alt="Map Placeholder" height="300" width="400">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="message-box">
+                    <textarea id="message" placeholder="Napiši sporočilo"></textarea>
+                    <button onclick="sendMessage()">Pošlji</button>
+                    <p id="confirmation" style="display:none; color:green;">Sporočilo poslano</p>
+                </div>
+                <script>
+                    function sendMessage() {
+                        document.getElementById('confirmation').style.display = 'block';
+                    }
+                </script>
+            </div>
+
+            <div class="tab-content hidden" id="details">
+                <table class="supplier-table">
+                    <thead>
+                        <tr>
+                            <th>Naročilo</th>
+                            <th>Datum naročila</th>
+                            <th>Datum predvidene dostave</th>
+                            <th>Datum dostave</th>
+                            <th>Stroški</th>
+                            <th>Kakovost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Naročilo 001</td>
+                            <td>01.10.2024</td>
+                            <td>05.10.2024</td>
+                            <td class="on-time">03.10.2024 <span class="status positive">+2</span></td>
+                            <td>1500 <span class="status positive">+2%</span></td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Naročilo 002</td>
+                            <td>01.10.2024</td>
+                            <td>08.10.2024</td>
+                            <td class="late">09.10.2024 <span class="status negative">-1</span></td>
+                            <td>600 <span class="status positive">+4%</span></td>
+                            <td>2</td>
+                        </tr>
+                        <!-- Add more rows as necessary -->
+                    </tbody>
+                </table>
+            </div>
+            
+
+            <div class="tab-content hidden" id="graph">
+                <div class="graph-container">
+                    <canvas id="graph1" width="300" height="150"></canvas>
+                    <canvas id="graph2" width="300" height="150"></canvas>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
