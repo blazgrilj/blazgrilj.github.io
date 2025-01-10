@@ -275,16 +275,3 @@ function changeTextSize(size) {
     localStorage.setItem('textSize', size);
 }
 
-// Check for stored preference on page load
-document.addEventListener('DOMContentLoaded', () => {
-    const storedMode = localStorage.getItem('darkMode');
-    const checkbox = document.getElementById('darkModeSwitch');
-    
-    if (storedMode === 'enabled') {
-        document.body.classList.add('dark-mode');
-        if (checkbox) checkbox.checked = true;
-    } else {
-        document.body.classList.remove('dark-mode');
-        if (checkbox) checkbox.checked = false;
-    }
-});
