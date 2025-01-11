@@ -104,11 +104,11 @@ checkboxes.forEach(function (checkbox) {
 });
 
 
-// // Function to initialize the table sorting on page load
-// document.addEventListener("DOMContentLoaded", function () {
-//     // Sort by the first column (index 0) in ascending order by default
-//     sortTable(0);
-// });
+// Function to initialize the table sorting on page load
+document.addEventListener("DOMContentLoaded", function () {
+    // Sort by the first column (index 0) in ascending order by default
+    sortTable(1);
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     // Add event listener for supplier names (click on the first column only)

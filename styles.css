@@ -189,7 +189,7 @@ table {
 
 th, td {
     padding: 18px 25px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #4d5058; /* Dark gray border */
     font-size: 0.95em;
     color: #d1d1d1; /* Light gray text */
@@ -211,6 +211,7 @@ tr:hover {
     background-color: #4a4e55; /* Dark gray hover effect */
     cursor: pointer;
 }
+
 
 .green {
     color: #44cf6c; /* Muted green for good status */
@@ -478,7 +479,7 @@ table {
 
 th, td {
     padding: 10px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #555;
 }
 
